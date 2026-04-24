@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    font-family: "Instrument Sans", sans-serif;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    background-color: #F2F1F0;
+}
+
+.navbar {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    width: 600px;
+}
+/* BANNER */
+
+.banner {
+    display: flex;
+    background-image: url('./assets/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-color: #F2F1F0;
+}
+
+.banner h2 {
+    color: white;
+    justify-content: center;
+    align-content: center;
+    margin-left: 200px;
+}
+
+/* CONTAINER */
+
+.container {
+    display: flex;
+    background-color: #F2F1F0;
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+
+/* FILTRO */
+
+.filtro {
+    flex-direction: column;
+    background-color: #D9D9D9;
+    width: 15%;
+    height: 50%;
+    border-radius: 15px;
+}
+
+.line {
+    text-decoration: line-through black 3px;
+}
+
+.filtro_tipo {
+    gap: 2%;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.details_filtro {
+    font-size: 20px;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+/* COVERS */
+
+.catalogo {
+    display: flex;
+    flex-direction: column;
+}
+
+.list_covers {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.covers_img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.titulo_cover {
+    font-weight: bold;
+}
+
+.details {
+
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #D9D9D9;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+footer p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer span {
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+footer img {
+    margin-left: 55%;
+}
