@@ -8,16 +8,24 @@
 
 header {
     display: flex;
+    justify-content: center;
     background-color: #F2F1F0;
 }
 
 .navbar {
     display: flex;
-    background-color: white;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    width: 600px;
+    background-color: green;
+    
+}
+
+#logo_titulo {
+    width: 200px;
+    height: 150px;  
+}
+
+#pesquisa {
+    width: 200px;
+    height: 200px;
 }
 /* BANNER */
 
