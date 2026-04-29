@@ -2,6 +2,7 @@
 
 * {
     font-family: "Instrument Sans", sans-serif;
+    margin: 0;
 }
 
 /* HEADER */
@@ -14,19 +15,26 @@ header {
 
 .navbar {
     display: flex;
-    background-color: green;
+    position: absolute;
+    width: 770px;
+    height: 91px;
     
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
 }
 
 #logo_titulo {
-    width: 200px;
-    height: 150px;  
+    width: 150px;
+    height: 100px;  
 }
 
-#pesquisa {
-    width: 200px;
-    height: 200px;
+#logo_login {
+    width: 100px;
+    height: 65px;  
 }
+
 /* BANNER */
 
 .banner {
@@ -47,10 +55,10 @@ header {
 
 /* CONTAINER */
 
-.container {
+#container {
     display: flex;
-    background-color: #F2F1F0;
     margin-top: 150px;
+    margin-bottom: 150px;
     margin-left: 50px;
 }
 
@@ -178,6 +186,8 @@ footer img {
     width: 700px;
     height: 500px;
     margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 200px;
 }
 
 .login {
@@ -214,7 +224,6 @@ footer img {
     align-self: center;
     margin-left: 50px;
 }
-
 
 
 
