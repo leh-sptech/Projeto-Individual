@@ -146,3 +146,86 @@ footer span {
 footer img {
     margin-left: 55%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOGIN */
+
+.body_login {
+    background-image: url('./assets/bannerlogin.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container_login {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(217,217,217, 0.75);
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.login {
+    align-content: center;
+}
+
+.meio {
+    align-content: center;
+    justify-content: center;
+}
+
+#botao_login {
+    border-radius: 20px;
+    background-color: #A8D39D;
+    border: 0;
+    height: 60px;
+    width: 90px;
+
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#p_senha {
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* CADASTRO */
+
+.cadastro {
+    align-self: center;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
