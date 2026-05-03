@@ -33,6 +33,16 @@ header {
     height: 100px;  
 }
 
+#pesquisa {
+    width: 400px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+
+    padding-left: 15px;
+}
+
 #logo_login {
     width: 100px;
     height: 65px;  
@@ -52,7 +62,7 @@ header {
     color: white;
     justify-content: center;
     align-content: center;
-    margin-left: 200px;
+    margin-left: 250px;
 }
 
 /* CONTAINER */
@@ -61,7 +71,7 @@ header {
     display: flex;
     margin-top: 150px;
     margin-bottom: 150px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 
@@ -71,7 +81,7 @@ header {
     flex-direction: column;
     background-color: #D9D9D9;
     width: 17%;
-    height: 50%;
+    height: 1000px;
     border-radius: 15px;
 }
 
@@ -79,30 +89,34 @@ header {
     text-decoration: line-through black 3px;
 }
 
-.filtro_tipo {
-    gap: 2%;
+#filtro_por {
     font-weight: bold;
     font-size: 20px;
-    margin-left: 20px;
+    margin: 24px 0 15px 20px;
+}
+
+#filtro_tipo {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 32px 0 5px 20px;
 }
 
 .details_filtro {
     font-size: 20px;
     text-decoration: underline;
-    margin-left: 20px;
+    margin: 5px 0 10px 20px;
 }
 
 /* COVERS */
 
 .container_albuns {
     display: flex;
-    margin-left: 250px;
+    margin-left: 200px;
 }
 
 .catalogo {
     display: flex;
     flex-direction: column;
-    
 }
 
 .list_covers {
@@ -145,12 +159,12 @@ footer {
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
-    width: fit-content;
 }
 
 footer p {
     font-size: 20px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 footer span {
@@ -188,49 +202,101 @@ footer img {
 
 .container_login {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: rgba(217,217,217, 0.75);
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 700px;
     height: 500px;
-    margin: 0 auto;
-    border-radius: 30px;
-    margin-top: 200px;
+    margin: 200px auto;
+    
+    background-color: rgba(217,217,217, 0.75);
+    border-radius: 30px; 
 }
 
 .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-content: center;
+
+}
+
+.informations {
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+.login input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+
+    padding-left: 15px;
+}
+
+#botao_login {
+    border-radius: 30px;
+    background-color: #A8D39D;
+    border: 0;
+    height: 45px;
+    width: 90px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 15px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#p_senha {
+    justify-self: center;
+    align-self: center;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+    margin-top: 30px;
 }
 
 .meio {
     align-content: center;
     justify-content: center;
-}
-
-#botao_login {
-    border-radius: 20px;
-    background-color: #A8D39D;
-    border: 0;
-    height: 60px;
-    width: 90px;
-
-
-    text-align: center;
-    font-weight: bold;
     font-size: 20px;
-}
-
-#p_senha {
-    font-size: 14px;
-    font-style: italic;
-    text-decoration: underline;
 }
 
 /* CADASTRO */
 
 .cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-self: center;
-    margin-left: 50px;
+}
+
+.cadastro input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+
+    padding-left: 15px;
+}
+
+#botao_registro {
+    border-radius: 30px;
+    background-color: #A8D39D;
+    border: 0;
+    height: 45px;
+    width: 110px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 15px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 
