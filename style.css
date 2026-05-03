@@ -2,7 +2,10 @@
 
 * {
     font-family: "Instrument Sans", sans-serif;
-    margin: 0;
+}
+
+body {
+    background-color: #F2F1F0;
 }
 
 /* HEADER */
@@ -43,7 +46,6 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
-    background-color: #F2F1F0;
 }
 
 .banner h2 {
@@ -92,9 +94,15 @@ header {
 
 /* COVERS */
 
+.container_albuns {
+    display: flex;
+    margin-left: 250px;
+}
+
 .catalogo {
     display: flex;
     flex-direction: column;
+    
 }
 
 .list_covers {
