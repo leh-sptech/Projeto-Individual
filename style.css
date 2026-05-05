@@ -8,6 +8,19 @@ body {
     background-color: #F2F1F0;
 }
 
+a {
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black; 
+}
+
 /* HEADER */
 
 header {

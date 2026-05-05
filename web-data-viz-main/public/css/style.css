@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    font-family: "Instrument Sans", sans-serif;
+}
+
+body {
+    background-color: #F2F1F0;
+}
+
+a {
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black; 
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #F2F1F0;
+}
+
+.navbar {
+    display: flex;
+    position: absolute;
+    width: 770px;
+    height: 91px;
+    
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+}
+
+#logo_titulo {
+    width: 150px;
+    height: 100px;  
+}
+
+#pesquisa {
+    width: 400px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+
+    padding-left: 15px;
+}
+
+#logo_login {
+    width: 100px;
+    height: 65px;  
+}
+
+/* BANNER */
+
+.banner {
+    display: flex;
+    background-image: url('../assets/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+.banner h2 {
+    color: white;
+    justify-content: center;
+    align-content: center;
+    margin-left: 250px;
+}
+
+/* CONTAINER */
+
+#container {
+    display: flex;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 100px;
+}
+
+
+/* FILTRO */
+
+.filtro {
+    flex-direction: column;
+    background-color: #D9D9D9;
+    width: 17%;
+    height: 1000px;
+    border-radius: 15px;
+}
+
+.line {
+    text-decoration: line-through black 3px;
+}
+
+#filtro_por {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 24px 0 15px 20px;
+}
+
+#filtro_tipo {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 32px 0 5px 20px;
+}
+
+.details_filtro {
+    font-size: 20px;
+    text-decoration: underline;
+    margin: 5px 0 10px 20px;
+}
+
+/* COVERS */
+
+.container_albuns {
+    display: flex;
+    margin-left: 200px;
+}
+
+.catalogo {
+    display: flex;
+    flex-direction: column;
+}
+
+.list_covers {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.covers_img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.titulo_cover {
+    font-weight: bold;
+    text-align: center;
+    margin: 3px;
+    margin-top: 10px;
+}
+
+.details {
+    text-align: center;
+    align-content: center;
+    margin: 3px;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #D9D9D9;
+    margin-top: 130px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+footer p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer span {
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+footer img {
+    margin-left: 55%;
+}
+
+/* LOGIN */
+
+.body_login {
+    background-image: url('../assets/bannerlogin.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container_login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 500px;
+    margin: 200px auto;
+    
+    background-color: rgba(217,217,217, 0.75);
+    border-radius: 30px; 
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.informations {
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+.login input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+
+    padding-left: 15px;
+}
+
+#botao_login {
+    border-radius: 30px;
+    background-color: #A8D39D;
+    border: 0;
+    height: 45px;
+    width: 90px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 15px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#p_senha {
+    justify-self: center;
+    align-self: center;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+
+.meio {
+    align-content: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* CADASTRO */
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.cadastro input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+
+    padding-left: 15px;
+}
+
+#botao_registro {
+    border-radius: 30px;
+    background-color: #A8D39D;
+    border: 0;
+    height: 45px;
+    width: 110px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 15px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+
+
+
