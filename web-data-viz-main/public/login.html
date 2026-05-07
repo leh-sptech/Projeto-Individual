@@ -107,7 +107,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "index.html";
+                        window.location = "userpage.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -146,6 +146,7 @@
     let nomeVar = nome_input.value;
     let emailVar = email_input2.value;
     let senhaVar = senha_input2.value;
+    let telefoneVar = ipt_telefone.value;
 
 
     // Verificando se há algum campo em branco
@@ -164,6 +165,15 @@
       setInterval(sumirMensagem, 6000);
     }
 
+      let Arroba = emailVar.indexOf('@');
+      let Ponto = emailVar.lastIndexOf('.');
+      
+
+      if (Arroba <= 0 || Ponto <= temArroba + 1 || Ponto >= emailVar.length - 1) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "O e-mail digitado é inválido.";
+        return false;
+      }
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
@@ -176,7 +186,8 @@
         // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         emailServer: emailVar,
-        senhaServer: senhaVar
+        senhaServer: senhaVar,
+        telefoneServer: telefoneVar
       }),
     })
       .then(function (resposta) {
@@ -186,11 +197,7 @@
           cardErro.style.display = "block";
 
           mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-          setTimeout(() => {
-            window.location = "index.html";
-          }, "2000");
+            "Cadastro realizado com sucesso!";
 
           limparFormulario();
           finalizarAguardar();
@@ -207,8 +214,8 @@
     return false;
   }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none";
-    }
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
 
 </script>
