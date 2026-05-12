@@ -19,6 +19,12 @@
         </div>
     </header>
 
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+          <span id="mensagem_erro"></span>
+          </div>
+    </div>
+
     <div class="container_login">
 
         <div class="login">
@@ -153,7 +159,8 @@
     if (
       nomeVar == "" ||
       emailVar == "" ||
-      senhaVar == "" 
+      senhaVar == "" ||
+      telefoneVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -169,7 +176,7 @@
       let Ponto = emailVar.lastIndexOf('.');
       
 
-      if (Arroba <= 0 || Ponto <= temArroba + 1 || Ponto >= emailVar.length - 1) {
+      if (Arroba <= 0 || Ponto <= Arroba + 1 || Ponto >= emailVar.length - 1) {
         cardErro.style.display = "block";
         mensagem_erro.innerHTML = "O e-mail digitado é inválido.";
         return false;

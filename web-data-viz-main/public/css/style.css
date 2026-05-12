@@ -304,7 +304,7 @@ footer img {
     justify-content: space-around;
     align-items: center;
     width: 1200px;
-    height: 450px;
+    height: 500px;
     margin: 200px auto 152px auto;
     border-radius: 40px;
 
@@ -314,7 +314,7 @@ footer img {
 .container_botoes p{
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
     font-size: 25px;
 }

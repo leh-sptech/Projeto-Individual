@@ -19,11 +19,9 @@
 
     <div class="container_user">
         <div class="container_botoes">
-            <p>Cadastrar Disco</p>
-            <p>Meus Discos</p>
-            <p>Lista de Desejo</p>
-            <p>Mensagens</p>
-            <p>DashBoards</p>
+            <a href="#"><p>Cadastrar Disco</p></a>
+            <a href="./meusdiscos.html"><p>Meus Discos</p></a>
+            <a href="./dashboard/dashboard.html"><p>DashBoards</p></a>
         </div>
 
         <div class="container_disc">
@@ -31,7 +29,13 @@
             <input class="input_discos" id="ipt_artista">
             <p>Titulo do Album:</p>
             <input class="input_discos" id="ipt_album">
-            <button id="botao_registro" onclick="">Cadastrar</button>
+            <p>Ano de lancamento do Album:</p>
+            <input class="input_discos" id="ipt_ano">
+            <p>Genero do Album:</p>
+            <input class="input_discos" id="ipt_genero">
+            <p>Condicao do Vinil:</p>
+            <input class="input_discos" id="ipt_cond">
+            <button id="botao_registro" onclick="cadastrarDisco()">Cadastrar</button>
         </div>
         <div class="container_image">
             <img src="./assets/covers/afterhours.png">
@@ -49,5 +53,67 @@
 </body>
 </html>
 <script>
+    function cadastrarDisco() {
+
+        let artistaVar = ipt_artista.value;
+        let discoVar = ipt_album.value;
+        let anoVar = ipt_ano.value;
+        let generoVar = ipt_genero.value;        
+        let condicaoVar = ipt_cond.value;
+
+        if (artistaVar == "" ||
+            discoVar == ""
+        ){
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+            "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        } 
+            
+    
+        fetch("/discos/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+                artistaServer: artistaVar,
+                discoServer: discoVar,
+                anoServer: anoVar,
+                generoServer: generoVar,
+                condicaoServer: condicaoVar
+            }),
+        })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+              cardErro.style.display = "block";
+
+              mensagem_erro.innerHTML =
+                "Cadastro realizado com sucesso!";
+
+              limparFormulario();
+              finalizarAguardar();
+            } else {
+              throw "Houve um erro ao tentar realizar o cadastro!";
+            
+            }
+        })    
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none";
+    }
     
 </script>
