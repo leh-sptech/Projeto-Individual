@@ -9,8 +9,8 @@
     <title>AquaTech | Dashboards</title>
 
     
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
@@ -26,10 +26,23 @@
 <!-- <body onload=" atualizarFeed()"> -->
 
 <body>
+    <header>
+        <a href="../index.html"><img src="../assets/logo.png"></a>
+
+        <div class="navbar">
+            <a href="../index.html">Inicio</a>
+            <a href="../login.html">Contate-nos</a>
+            <a href="../login.html">Log In</a>
+        </div>
+    </header>
 
     <div class="janela">
-        <div class="header-left">
-            <h1>AquaTech</h1>
+        <div class="container_botoes">
+            <a href="./userpage.html">Cadastrar Disco</a>
+            <a href="./meusdiscos.html">Meus Discos</a>
+            <a href="#" id="agora">Catálogo</a>
+            <a href="./dashboard/dashboard.html">DashBoards</a>
+        </div>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>

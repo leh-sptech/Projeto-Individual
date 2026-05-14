@@ -1,64 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
-    font-family: "Instrument Sans", sans-serif;
+    font-family: "Anton", sans-serif;
 }
 
-body {
-    background-color: #F2F1F0;
-}
+/* body {
+    background-color: white;
+} */
 
 a {
+    display: flex;
     text-decoration: none;
     background: none;
     border: none;
     width: fit-content;
     height: fit-content;
+
+    color: #1F2020;
 }
 
 a:link, a:visited {
     text-decoration: none;
-    color: black; 
+    color: #1F2020;; 
 }
 
 /* HEADER */
 
 header {
     display: flex;
-    justify-content: center;
-    background-color: #F2F1F0;
+    background-color: #E4E3DFE6;
 }
 
 .navbar {
     display: flex;
-    position: absolute;
-    width: 770px;
-    height: 91px;
-    
     align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 0 0 20px 20px;
+    margin-left: 1000px;
+
+    height: 100px;
 }
 
-#logo_titulo {
-    width: 150px;
-    height: 100px;  
+header img {
+    height: 113px;
+    width: 227px;
 }
 
-#pesquisa {
-    width: 400px;
-    height: 35px;
-    border: none;
-    border-radius: 20px;
-    background-color: #D9D9D9;
-
-    padding-left: 15px;
+.navbar a {
+    margin-left: 100px;
+    font-size: 28px;
 }
 
-#logo_login {
-    width: 100px;
-    height: 65px;  
+.navbar a:hover {
+    color: #35BFBF;
 }
 
 /* BANNER */
@@ -201,12 +193,17 @@ footer img {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 700px;
+    width: 800px;
     height: 500px;
-    margin: 200px auto;
+    margin: 100px auto;
     
-    background-color: rgba(217,217,217, 0.75);
+    background-color: #E4E3DFE6;
     border-radius: 30px; 
+}
+
+.container_login h1 {
+    justify-self: center;
+    color: #1F2020;
 }
 
 .login {
@@ -218,6 +215,7 @@ footer img {
 }
 
 .informations {
+    color: #1F2020;
     font-weight: bold;
     margin: 10px 0 10px 0;
 }
@@ -228,23 +226,30 @@ footer img {
     border: none;
     border-radius: 10px;
     background-color: #D9D9D9;
+    border: 1px solid black;
 
     padding-left: 15px;
 }
 
 #botao_login {
     border-radius: 30px;
-    background-color: #A8D39D;
+    background-color: #1F2020;
     border: 0;
     height: 45px;
-    width: 90px;
+    width: 100px;
     justify-self: center;
     align-self: center;
     margin-top: 15px;
 
+    color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
+}
+
+#botao_login:hover, #botao_registro:hover {
+    background-color: #35BFBF;
+    border: 1px solid black;
 }
 
 #p_senha {
@@ -257,9 +262,12 @@ footer img {
 }
 
 .meio {
+    margin-left: 40px;
+    margin-right: 40px;
     align-content: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 25px;
+    color: #1F2020;
 }
 
 /* CADASTRO */
@@ -277,69 +285,123 @@ footer img {
     border: none;
     border-radius: 10px;
     background-color: #D9D9D9;
+    border: 1px solid black;
 
     padding-left: 15px;
 }
 
 #botao_registro {
     border-radius: 30px;
-    background-color: #A8D39D;
+    background-color: #1F2020;
     border: 0;
     height: 45px;
-    width: 110px;
+    width: 125px;
     justify-self: center;
     align-self: center;
     margin-top: 15px;
 
+    color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 /* PAGINA DO USUARIO */
+
+.container_botoes {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0 5px 210px;
+    gap: 115px;
+}
+
+.container_botoes a {
+    border-radius: 20px;
+    background-color: #1F2020;
+    height: 50px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    
+
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.container_botoes a:hover {
+    background-color: #35BFBF;
+}
+
+#agora {
+    background-color: #35BFBF;
+}
+
+.container_geral {
+    display: flex;
+    flex-direction: row;
+}
 
 .container_user {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 1200px;
-    height: 500px;
-    margin: 200px auto 152px auto;
+    width: 1000px;
+    height: 550px;
+    margin: 30px 200px 0 200px;
     border-radius: 40px;
-
-    background-color: #D9D9D9;
-}
-
-.container_botoes p{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-
-    font-size: 25px;
+    background-color: #E4E3DFE6;
+    color: #1F2020;
 }
 
 .container_disc {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
 
     font-size: 20px;
+    color: #1F2020;
 }
 
 .input_discos {
     width: 300px;
     height: 40px;
-    border: none;
+    border: 1px solid black;
     border-radius: 10px;
     background-color: white;
 
     padding-left: 15px;
 }
 
-.container_image {
+#container_image {
     display: flex;
     justify-content: center;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
+}
+
+.escrito {
+    display: flex;
+    
+    font-size: 70px;
+    color: #1F2020;
+}
+
+/* MEUS DISCOS */
+
+#container_images {
+    display: flex;
+    align-self: center;
+    margin: 0 50px 0 0;
+    height: 500px;
+    width: 500px;
+}
+
+/* CATALOGO */
+
+#container_vinilbag {
+    display: flex;
+    align-self: center;
+    margin: 0 50px 0 0;
 }
