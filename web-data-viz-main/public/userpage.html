@@ -20,10 +20,10 @@
     </header>
 
     <div class="container_botoes">
+        <a href="./dashboard/dashboard.html">DashBoards</a>
         <a href="#" id="agora">Cadastrar Disco</a>
         <a href="./meusdiscos.html">Meus Discos</a>
         <a href="./catalogo.html">Catálogo</a>
-        <a href="./dashboard/dashboard.html">DashBoards</a>
     </div>
 
     <div class="container_geral">
@@ -56,6 +56,8 @@
 </body>
 </html>
 <script>
+    const usuarioId = sessionStorage.usuarioId;
+
     function cadastrarDisco() {
 
         let artistaVar = ipt_artista.value;

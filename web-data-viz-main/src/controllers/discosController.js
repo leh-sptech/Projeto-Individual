@@ -2,7 +2,7 @@ var discosModel = require("../models/discosModel");
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var idUsuario = req.params.id;
+    var idUsuario = req.params.usuarioId;
     var disco = req.body.discoServer;
     var artista = req.body.artistaServer;
     var ano = req.body.anoServer;
