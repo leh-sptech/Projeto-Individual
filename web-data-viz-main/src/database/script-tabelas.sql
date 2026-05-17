@@ -5,7 +5,6 @@
 /*
 comandos para mysql server
 */
-
 CREATE DATABASE aquatech;
 
 USE aquatech;
@@ -60,3 +59,33 @@ insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B
 insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
 insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
 insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
+
+
+
+
+
+
+INSERT INTO medida 
+(dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave, momento, fk_aquario)
+VALUES
+(58.2, 24.5, 320.8, 25.1, 1, '2026-05-14 08:00:00', 1);
+
+INSERT INTO medida 
+(dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave, momento, fk_aquario)
+VALUES
+(60.7, 23.9, 280.4, 24.3, 0, '2026-05-14 08:05:00', 1);
+
+INSERT INTO medida 
+(dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave, momento, fk_aquario)
+VALUES
+(55.1, 25.3, 350.2, 26.0, 1, '2026-05-14 08:10:00', 2);
+
+INSERT INTO medida 
+(dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave, momento, fk_aquario)
+VALUES
+(62.5, 22.8, 260.7, 23.4, 0, '2026-05-14 08:15:00', 2);
+
+INSERT INTO medida 
+(dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave, momento, fk_aquario)
+VALUES
+(57.9, 24.1, 300.0, 24.8, 1, '2026-05-14 08:20:00', 3);

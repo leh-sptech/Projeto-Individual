@@ -2,7 +2,7 @@ var discosModel = require("../models/discosModel");
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var idUsuario = req.params.usuarioId;
+    var idUsuario = req.body.idUsuarioServer;
     var disco = req.body.discoServer;
     var artista = req.body.artistaServer;
     var ano = req.body.anoServer;
@@ -26,10 +26,10 @@ function cadastrar(req, res) {
     else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        discosModel.cadastrar(idUsuario, disco, artista, ano, genero, condicao, disponivelTroca)
+        discosModel.cadastrar(idUsuario, disco, artista, ano, genero, condicao)
             .then(
                 function (resultado) {
-
+                    console.log('Recuperando resultado do Models')
                     res.json(resultado);
                 }
             ).catch(

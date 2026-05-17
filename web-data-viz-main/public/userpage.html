@@ -39,7 +39,7 @@
                 <input class="input_discos" id="ipt_genero">
                 <p>Condição do Vinil:</p>
                 <input class="input_discos" id="ipt_cond">
-                <button id="botao_registro" onclick="cadastrarDisco()">Cadastrar</button>
+                <button id="botao_registro" onclick="cadastrar()">Cadastrar</button>
             </div>
 
             <div id="container_image">
@@ -56,9 +56,9 @@
 </body>
 </html>
 <script>
-    const usuarioId = sessionStorage.usuarioId;
+    const idUsuario = sessionStorage.ID_USUARIO;
 
-    function cadastrarDisco() {
+    function cadastrar() {
 
         let artistaVar = ipt_artista.value;
         let discoVar = ipt_album.value;
@@ -86,8 +86,9 @@
             body: JSON.stringify({
         // crie um atributo que recebe o valor recuperado aqui
         // Agora vá para o arquivo routes/usuario.js
-                artistaServer: artistaVar,
+                idUsuarioServer: idUsuario,
                 discoServer: discoVar,
+                artistaServer: artistaVar,
                 anoServer: anoVar,
                 generoServer: generoVar,
                 condicaoServer: condicaoVar
@@ -102,8 +103,6 @@
               mensagem_erro.innerHTML =
                 "Cadastro realizado com sucesso!";
 
-              limparFormulario();
-              finalizarAguardar();
             } else {
               throw "Houve um erro ao tentar realizar o cadastro!";
             
@@ -111,7 +110,6 @@
         })    
         .catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
 
         return false;
